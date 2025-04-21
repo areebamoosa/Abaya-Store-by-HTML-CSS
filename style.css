@@ -1,0 +1,907 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Front Page ( Index Page ) */
+
+/*  Sliding Text */
+
+.panel {
+  color: #fff;
+  background-color: rgb(26, 26, 26);
+  font-size: 0.8rem;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+}
+.sliding-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: slide-left 10s linear infinite;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Navigation Bar */
+
+.navbar {
+  height: 33px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  list-style: none;
+  position: relative;
+}
+.logo a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.7rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+.logo a h1 {
+  font-size: 1.7rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+.side i {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/*  Search Bar  */
+
+.search {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+.search input {
+  padding: 10px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: none;
+  outline: none;
+}
+
+.search i {
+  padding: 10px;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: none;
+  cursor: pointer;
+}
+.search input {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.search i {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Navigation Menu */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+}
+.nav li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+.nav li {
+  text-decoration: none;
+  list-style: none;
+  padding: 25px;
+}
+.nav li::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: rgb(34, 33, 33);
+  display: block;
+  margin-left: 0;
+  transition: 0.5s;
+}
+.nav li:hover::after {
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Drop - Down Bar */
+
+.drop-down {
+  position: relative;
+  text-align: left;
+}
+.drop {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 80px;
+  text-align: left;
+  z-index: 999;
+}
+.drop {
+  text-align: left;
+}
+.drop li {
+  text-align: left;
+}
+.drop li a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+.navbar .drop {
+  text-align: left !important;
+}
+.drop-down:hover .drop {
+  display: block;
+  text-align: left;
+}
+.drop li:last-child a {
+  border-bottom: none;
+}
+
+.sidebar{
+  display: none;
+}
+#check{
+  display: none;
+}
+#btn , #cancel{
+  display: none;
+}
+
+/* Front Header Image */
+
+.Image img {
+  width: 100%;
+  height: 70%;
+}
+
+/*  Main Text of Page */
+.par {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 30px;
+}
+.par .head p {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.parag {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+/* Main Collection Line */
+
+.collection {
+  display: flex;
+  margin-top: 3px;
+  overflow: hidden;
+  position: relative;
+}
+.collect {
+  margin: 25px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.collect img {
+  width: 100%;
+  height: 100%;
+}
+.collect:hover {
+  z-index: 2;
+  transform: scale(1.1);
+}
+
+/* Line */
+
+.line-with-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.line-with-text::before,
+.line-with-text::after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px solid black;
+}
+
+.line-with-text::before {
+  margin-right: 10px;
+}
+
+.line-with-text::after {
+  margin-left: 10px;
+}
+
+.line-with-text span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
+}
+
+.view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.view li {
+  list-style: none;
+}
+.view li a {
+  color: black;
+}
+
+/* New Arrival Section */
+
+.arrivals {
+  display: flex;
+  margin-top: 3px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.abayas {
+  margin: 25px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.abayas img {
+  width: 100%;
+  height: 100%;
+}
+
+.abayas span {
+  display: block;
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+  margin-top: 5px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.abayas p {
+  text-align: center;
+  padding-top: 8px;
+}
+.abayas span:hover {
+  color: rgb(163, 52, 52);
+}
+.abayas p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Video */
+
+.video {
+  width: 100%;
+  max-width: 10000px;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+.video video {
+  width: 100%;
+  height: auto;
+}
+
+/* FEEDBACK Section */
+
+.feed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  margin: 100px;
+}
+
+.f-text {
+  padding: 20px;
+  font-size: 0.9rem;
+}
+.f-butn {
+  color: white;
+  background-color: #214032;
+  border: none;
+  padding: 13px;
+  cursor: pointer;
+}
+.f-butn:hover {
+  color: white;
+  background-color: chocolate;
+}
+
+/* Tagline */
+
+.tag {
+  background-color: rgb(229, 223, 223);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 75px;
+  flex-direction: column;
+}
+
+.top p {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: left;
+}
+.top {
+  text-align: left;
+}
+.read {
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.read:hover {
+  text-decoration: underline;
+}
+
+/* NEWS LETTER */
+
+.footer {
+  background-color: #214032;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  flex-direction: column;
+  padding: 20px;
+}
+.h {
+  font-size: 1.2rem;
+  padding: 5px;
+  margin-top: 60px;
+}
+.t {
+  font-size: 0.99rem;
+  padding: 8px;
+}
+.e-form {
+  padding-top: 30px;
+  text-align: left;
+}
+.e-form input {
+  padding: 13px 180px;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+.sign {
+  padding: 13px 15px;
+  border: none;
+  color: black;
+  background-color: rgb(239, 138, 65);
+  cursor: pointer;
+}
+.e-form[placeholder] {
+  text-align: left;
+  cursor: pointer;
+}
+
+.letter {
+  background-color: #214032;
+  color: white;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: left;
+  padding: 55px;
+}
+.let h2 {
+  margin-top: -147px;
+  font-family: "Playfair Display", serif;
+}
+.space {
+  margin-top: 27px;
+}
+.let ul li {
+  list-style: none;
+  padding: 10px;
+}
+.let ul li:hover {
+  text-decoration: underline;
+}
+.let i {
+  padding: 20px 24px;
+  text-align: left;
+  cursor: pointer;
+}
+.let .get {
+  margin-top: -115px;
+  text-align: left;
+}
+
+/* Footer */
+
+footer {
+  background-color: #214032;
+  color: white;
+  padding: 20px;
+}
+
+/* Other Tabs */
+
+/* Transition Text */
+
+.transition {
+  color: #fff;
+  background-color: rgb(26, 26, 26);
+  font-size: 0.8rem;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+.trans-text {
+  animation: bounce-up-down 2s ease-in-out infinite;
+}
+
+@keyframes bounce-up-down {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Text Lines */
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 40px;
+  color: rgb(63, 60, 60);
+}
+.header h2 {
+  font-weight: 7px;
+}
+.header p {
+  padding: 15px;
+}
+
+/* Collection Alignment */
+
+.hijabs {
+  display: flex;
+  margin-top: 3px;
+  position: relative;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+.h-collect {
+  margin: 25px;
+  width: 22%;
+  margin: 1.5%;
+  box-sizing: border-box;
+  text-align: left;
+}
+.h-collect img {
+  width: 100%;
+  height: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.h-collect span {
+  display: block;
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+  margin-top: 5px;
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.h-collect p {
+  text-align: left;
+  padding-top: 8px;
+  color: rgb(63, 60, 60);
+}
+.h-collect span:hover {
+  color: rgb(163, 52, 52);
+}
+.h-collect p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*  RESPONSIVENESS OF  WHOLE WEBSITE */
+
+
+/* Media Queries for Sliding Text */
+
+@media (min-width : 320px ) and (max-width:400px){
+  .panel p{
+   font-size: 0.6rem;
+  }
+}
+
+/* Media Queries for a Responsive Navbar */
+
+@media (min-width:320px) and ( max-width : 655px ) {
+
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .search {
+      position: absolute;
+      right: 15px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      border: none;
+    }
+    .search input {
+      padding: 2px;
+      font-size: 14px;
+      width: 100px;
+      outline: none;
+      border: none;
+    }
+    .search i {
+      padding: 2px;
+      font-size: 16px;
+      outline: none;
+      border: none;
+    }
+    .nav {
+    display: none;
+    }
+    .side{
+    display: none;
+    }
+
+/* Hides the checkbox */
+
+#check {
+  display: none;
+}
+
+/* Label with the menu icons (Bar and Cancel) */
+
+label {
+  position: fixed;
+  top: 50px;
+  left: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001;
+  color: black;
+}
+
+/* Bar icon */
+
+#btn {
+  display: inline;
+}
+
+/* Close icon  */
+
+#cancel {
+  display: none;
+}
+
+/* When checkbox is checked, Bar icon becomes hidden */
+
+#check:checked ~ label #btn {
+  display: none;
+}
+
+/* When checkbox is checked, Cancel icon becomes visible */
+
+#check:checked ~ label #cancel {
+  display: inline;
+
+}
+
+/* Sidebar style */
+
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  background-color: #fce495;
+  left: -250px; 
+  top: 0;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  padding-top: 150px;
+  display: flex;
+  text-align: left;
+  color: black;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* When checkbox is checked, the sidebar moves in */
+
+#check:checked ~ .sidebar {
+  left: 0;
+}
+
+/* Sidebar links */
+
+.sidebar .nav-bar {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar .nav-bar li {
+  text-align: center;
+  color: black;
+  padding: 25px 20px;
+  width: 100%;
+}
+
+.sidebar .nav-bar ul li{
+  color: black;
+}
+
+.sidebar .nav-bar li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  display: block;
+  text-align: left;
+
+}
+
+/* Hover effect for links */
+
+.sidebar .nav-bar li a:hover {
+
+background-color: rgb(177, 172, 172);
+}
+
+}
+
+/* Media Queries for Font of Logo */
+
+@media (min-width : 484px ) and (max-width:513px){
+  .logo a h1 {
+    font-size: 1.4rem;
+  } 
+}
+
+@media (min-width : 320px ) and (max-width:483px){
+  .logo a h1 {
+    font-size: 1rem;
+  } 
+}
+
+/* Media Queries for Search Bar */
+
+@media (min-width : 320px ) and (max-width:483px){
+
+.search input {
+  font-size: 8px;
+  width: 40px;
+}
+
+.search i {
+  font-size: 8px;
+}
+
+}
+
+/* Media Queries for Side Bar */
+
+@media (min-width : 320px ) and (max-width:483px){
+
+  label {
+    top:55px;
+    font-size: 20px;
+  }
+}
+
+/* Media Queries for 320px index page  */
+
+@media (min-width : 320px ) and (max-width:364px){
+
+  .par .head p{
+    font-size: 0.8rem;
+  }
+.parag p{
+    font-size: 0.5rem;
+  }
+}
+
+/* Media Queries for Collection Sections */
+
+@media (min-width: 320px) and (max-width: 636px) {
+  .arrivals {
+    flex-direction: column;
+  }
+}
+
+/*  ABAYAS TAB */
+
+  @media (max-width: 668px) {
+    .h-collect {
+      flex: 1 1 calc(50% - 20px);
+      max-width: calc(50% - 20px);
+    }
+  }
+
+/* MOMMY & ME SECTION */
+
+@media (min-width: 595px) and (max-width: 990px) {
+  .header pre {
+    font-size: 0.6rem;
+  }
+}
+@media (min-width: 320px) and (max-width: 595px) {
+  .header pre {
+    font-size: 0.3rem;
+  }
+}
+
+/* Media Queries for Feedback Section */
+
+@media (min-width: 320px) and (max-width: 1260px) {
+  .feed {
+    flex-direction: column;
+    margin: 50px;
+    text-align: center;
+  }
+
+  .f-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .f-text {
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+
+  .f-butn {
+    margin-top: 15px;
+  }
+}
+
+/* Media Queries for Tagline Section */
+
+@media (min-width: 320px) and (max-width: 499px) {
+  .tag {
+    justify-content: flex-start;
+  }
+  .top p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Email Section */
+
+@media (min-width: 320px) and (max-width: 625px) {
+  .e-form input {
+    padding: 5px 20px;
+  }
+  .sign {
+    padding: 5px 4px;
+  }
+}
+
+/* Letter's Section */
+
+@media (min-width: 320px) and (max-width: 1068px) {
+  .letter {
+    flex-direction: column;
+    padding: 30px 20px;
+    overflow-x: hidden;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .let h2 {
+    margin-top: 0;
+  }
+  .let .get {
+    margin-top: 0;
+  }
+  .let i {
+    padding: 10px 10px;
+  }
+}
+
+/* FOOTER */
+
+@media (min-width: 320px) and (max-width: 1636px) {
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    background-color: #214032;
+    color: white;
+  }
+
+  footer .credit {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85rem;
+  }
+}
+
+
+
