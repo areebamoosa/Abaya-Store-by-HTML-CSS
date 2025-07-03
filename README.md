@@ -5,5 +5,5 @@ This project marks my first venture into building an online store completely res
 ## Features
 - Clean and minimalistic design.
 - Responsive layout for mobile and desktop views.
-- Built purely with HTML & CSS—no frameworks or JavaScript.
-
+- Built with HTML & CSS
+- No frameworks or JavaScript.
